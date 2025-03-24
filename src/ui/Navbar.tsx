@@ -1,4 +1,4 @@
-import React from "react";
+import React, { MouseEventHandler } from "react";
 import {
   AppBar,
   Avatar,
@@ -202,7 +202,10 @@ export default function Navbar() {
                 </MenuItem>
               ))}
 
-              <MenuItem onClick={logout} className=" hover:!bg-red-50">
+              <MenuItem
+                onClick={logout as MouseEventHandler}
+                className=" hover:!bg-red-50"
+              >
                 <Typography sx={{ textAlign: "center" }} color="error">
                   logout
                 </Typography>

@@ -109,7 +109,7 @@ export default function Products() {
           count={pageCount}
           onChange={(e, value) =>
             setSearchParams((params) => {
-              params.set("page", value);
+              params.set("page", `${value}`);
               return params;
             })
           }

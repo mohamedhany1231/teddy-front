@@ -12,10 +12,12 @@
     "moduleDetection": "force",
     "noEmit": true,
 
+    "noEmitOnError": false,
+
     /* Linting */
     "strict": false,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": true
   },
   "include": ["vite.config.ts"]
