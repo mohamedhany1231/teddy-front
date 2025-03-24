@@ -1,6 +1,7 @@
-export default {
+module.exports = {
   plugins: {
+    "fluid-tailwind": {},
     tailwindcss: {},
     autoprefixer: {},
   },
-}
+};
