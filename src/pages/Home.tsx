@@ -29,7 +29,7 @@ function Home() {
         <section className=" pb-[10%]">
           <motion.img
             className="   ~sm/lg:~h-40/96 ~sm/lg:~w-40/96 object-cover rounded-full  float-left mr-4  "
-            src="./images/landing.jpg"
+            src="/images/landing.jpg"
             alt="teddy bear image"
             style={{ shapeOutside: "circle(50%)" }}
             initial={{ x: -100, scale: 0.5 }}
@@ -81,7 +81,7 @@ function Home() {
           </div>
         </section>
       </Container>
-      <section className=" my-16 bg-blend-multiply bg-[url('./images/landing2.jpg')] bg-black  bg-opacity-65 bg-cover h-[70vh] w-full  bg-center flex items-center justify-center  ">
+      <section className=" my-16 bg-blend-multiply bg-[url('/images/landing2.jpg')] bg-black  bg-opacity-65 bg-cover h-[70vh] w-full  bg-center flex items-center justify-center  ">
         <motion.h3
           ref={ref}
           variants={{
@@ -133,7 +133,7 @@ function Home() {
             </Grid2>
             <Grid2 size={{ xs: 12, lg: 4 }}>
               <img
-                src="./images/about.jpeg"
+                src="/images/about.jpeg"
                 alt="bears in suits"
                 className=" h-full max-h-[500px] m-auto   object-cover shadow-sm shadow-orange-800 rounded-md"
               />

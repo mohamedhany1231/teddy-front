@@ -30,7 +30,7 @@ export default function Products() {
   if (loading)
     return (
       <div className=" h-full w-full flex items-center justify-center">
-        <CircularProgress size={200} />;
+        <CircularProgress size={200} />
       </div>
     );
 
@@ -53,6 +53,9 @@ export default function Products() {
     }, 1000);
   }
 
+  if (!products) {
+    return <h2 className=" text-3xl  capitalize mx-auto">no products found</h2>;
+  }
   return (
     <Grid
       container
