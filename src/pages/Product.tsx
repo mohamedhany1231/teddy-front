@@ -1,6 +1,6 @@
 import { useMutation, useQuery } from "@apollo/client";
 import React, { useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import getProduct from "../graphQl/products/getProduct";
 import {
   Accordion,
@@ -25,6 +25,7 @@ import getMe from "../graphQl/user/getMe";
 
 export default function Product() {
   const { data: { me } = {}, loading: loadingUser } = useQuery(getMe);
+  const navigate = useNavigate();
 
   const { id } = useParams();
   const { data: { product } = {}, loading } = useQuery(getProduct, {
@@ -118,7 +119,16 @@ export default function Product() {
             className=""
             alignItems={"stretch"}
           >
-            {me?.id === product?.seller?.id ? (
+            {!me?.id ? (
+              <Button
+                variant="contained"
+                size="large"
+                className=" self-end  w-fit mr-10 "
+                onClick={() => navigate("/login")}
+              >
+                login to continue
+              </Button>
+            ) : me?.id === product?.seller?.id ? (
               <Typography color="textDisabled" className=" pl-2">
                 {" "}
                 go to offers pages to view offers on your products{" "}
